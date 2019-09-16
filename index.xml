@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monaka note</title>
+    <link>https://captainmonaka.github.io/note/</link>
+    <description>Recent content on Monaka note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>jp</language>
+    <lastBuildDate>Mon, 02 Sep 2019 08:14:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://captainmonaka.github.io/note/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ホロアトレの思い出(動画)</title>
+      <link>https://captainmonaka.github.io/note/posts/5-post/</link>
+      <pubDate>Mon, 02 Sep 2019 08:14:00 +0900</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/posts/5-post/</guid>
+      <description>構成：blender,MMD,マッチムーブ
+blederによる実写合成の動画。 カメラトラッキング、コンポジット、MMDやモーション修正など。 影やパースの調整、ガラスへの映り込みやモデル破綻がないようあれこれ工夫している。 ARCoreの合成だとプレゼンスに不満があったため、マッチムーブに挑戦した。 #ホロアトレ の思い出。この夏はここから始まったんだ。#MMD #soraArt #ロボ子MMD #絵フブキ pic.twitter.com/aUn98IV1Ns
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年9月6日</description>
+    </item>
+    
+    <item>
+      <title>VFrame(androidアプリ)</title>
+      <link>https://captainmonaka.github.io/note/posts/4-post/</link>
+      <pubDate>Mon, 12 Aug 2019 08:14:00 +0900</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/posts/4-post/</guid>
+      <description>構成：android,unity,顔認識
+カメラからの顔認識を使った２つのモードで遊ぶアプリです。暗いと認識しないので注意。 ２つのモードがあって、トラッキングモードはフェイストラッキングできるやつ。目、口、頭の位置を認識。ウィンクもあくびもできます。タッチ操作でアングルを変えたり、画面下部タッチで、VRMで設定したブレンドシェイプも。 作った理由は、androidに #VRM のフェイストラッキングがなかったから。AssetのCVVTuberをもとにしてます。画像処理なので、ちょっと重いのと暗いと認識が落ちるのが課題。Dlib FaceLandmark Detectorを使ってますが、顔検知の元データがCC0になった模様。 ディスプレイモードは、VRMが待機モーションで表示されて、顔の位置に連動して表示も動いてくれるやつ。片目やカメラ越しだと立体的に見えるかも？ 用途は、ブースの横に立てかけて置くとか。タッチ操作で、モデルを近づけて画面から飛び出たり（してるように見えなくもない。本来的にはこのモードをARcoreで実装するアプリだったけど、途中でARcore経由のfront cameraが動作しなくなり、やむなくopenCVに移行。 VRM対応アプリを作ってみたかったのと、裸眼でどこまでプレゼンスを上げれるか？の実験でした。脳をバグらせるのは難しい。 デフォルトアバターから自前のVRMに置き換えられます。下記のパスに.vrmを１個置いてもらえれば。 \Android\data\com.Monaka.VFrame\files\VFrame https://play.google.com/store/apps/details?id=com.Monaka.VFrame ディスプレイモードのテスト版(PC)の動画#VFrame pic.twitter.com/LMQ4aY2DXN
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年9月16日</description>
+    </item>
+    
+    <item>
+      <title>TokinoSora FanWorld reaming!(VRChatワールド)</title>
+      <link>https://captainmonaka.github.io/note/posts/3-post/</link>
+      <pubDate>Fri, 12 Apr 2019 08:14:00 +0900</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/posts/3-post/</guid>
+      <description>構成：VRChat,unity,blender,MMD,パーティクルライブ
+ときのそらさんのメジャーデビュー応援のため、有志のファンで作成したVRChatのワールド。公式許諾あり。 音周りのギミックや小物モデリング、パーティクルライブ(太陽系デスコ)を担当。 お披露目のVRChat集会を２日間にわたり実施。 ワールド作成も＆パーティクルライブ作成もナレッジがなくて手探りだった思い出。</description>
+    </item>
+    
+    <item>
+      <title>スプラ実況(動画)</title>
+      <link>https://captainmonaka.github.io/note/posts/2-post/</link>
+      <pubDate>Fri, 12 Oct 2018 08:14:00 +0900</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/posts/2-post/</guid>
+      <description>構成：unity,steamVR,VIVE,VRM,透過液晶
+VIVEでトラッキングを行い、unityシーン上でVRMを動かすシステム。
+透過液晶を全面にはめた舞台装置を作成。 あたかも舞台上にいるような疑似ホログラムを用意して撮影した。 自分で動画をいくつか収録。 失敗も含め液晶を何個も分解してしまった。VRM作成(フリーモデル改変)はblender。</description>
+    </item>
+    
+    <item>
+      <title>バーチャル配信システム(動画)</title>
+      <link>https://captainmonaka.github.io/note/posts/my-first-post/</link>
+      <pubDate>Thu, 12 Apr 2018 08:14:00 +0900</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/posts/my-first-post/</guid>
+      <description>構成:unity,steamVR,VIVE,MMD,OVRLipSync,ゆかりねっと
+VIVEでトラッキングを行い、unityシーン上でMMDを動かすシステム。 声はVOICEROIDに変換され、リップシンク対応。 登録したMMDの表情をVIVEコントローラで操作可能。 自分でいくつかゲーム実況を収録。unityによる初制作物。 赤いバーチャルボイスロイド参戦！！</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://captainmonaka.github.io/note/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/pages/about/</guid>
+      <description>Monaka&amp;rsquo;s Portfolio モナカアズキのポートフォリオ置き場</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://captainmonaka.github.io/note/pages/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/pages/contact/</guid>
+      <description>twitter : https://twitter.com/captainmonaka11 mail:captainmonaka11@gmail.com</description>
+    </item>
+    
+  </channel>
+</rss>

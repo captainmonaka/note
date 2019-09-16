@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>VFrame(androidアプリ) - Monaka note</title>
+<meta name="description" content="構成：android,unity,顔認識
+カメラからの顔認識を使った２つのモードで遊ぶアプリです。暗いと認識しないので注意。 ２つのモードがあって、トラッキングモードはフェイストラッキングできるやつ。目、口、頭の位置を認識。ウィンクもあくびもできます。タッチ操作でアングルを変えたり、画面下部タッチで、VRMで設定したブレンドシェイプも。 作った理由は、androidに #VRM のフェイストラッキングがなかったから。AssetのCVVTuberをもとにしてます。画像処理なので、ちょっと重いのと暗いと認識が落ちるのが課題。Dlib FaceLandmark Detectorを使ってますが、顔検知の元データがCC0になった模様。 ディスプレイモードは、VRMが待機モーションで表示されて、顔の位置に連動して表示も動いてくれるやつ。片目やカメラ越しだと立体的に見えるかも？ 用途は、ブースの横に立てかけて置くとか。タッチ操作で、モデルを近づけて画面から飛び出たり（してるように見えなくもない。本来的にはこのモードをARcoreで実装するアプリだったけど、途中でARcore経由のfront cameraが動作しなくなり、やむなくopenCVに移行。 VRM対応アプリを作ってみたかったのと、裸眼でどこまでプレゼンスを上げれるか？の実験でした。脳をバグらせるのは難しい。 デフォルトアバターから自前のVRMに置き換えられます。下記のパスに.vrmを１個置いてもらえれば。 \Android\data\com.Monaka.VFrame\files\VFrame https://play.google.com/store/apps/details?id=com.Monaka.VFrame ディスプレイモードのテスト版(PC)の動画#VFrame pic.twitter.com/LMQ4aY2DXN
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年9月16日"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://captainmonaka.github.io/note/posts/4-post/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="構成：android,unity,顔認識
+カメラからの顔認識を使った２つのモードで遊ぶアプリです。暗いと認識しないので注意。 ２つのモードがあって、トラッキングモードはフェイストラッキングできるやつ。目、口、頭の位置を認識。ウィンクもあくびもできます。タッチ操作でアングルを変えたり、画面下部タッチで、VRMで設定したブレンドシェイプも。 作った理由は、androidに #VRM のフェイストラッキングがなかったから。AssetのCVVTuberをもとにしてます。画像処理なので、ちょっと重いのと暗いと認識が落ちるのが課題。Dlib FaceLandmark Detectorを使ってますが、顔検知の元データがCC0になった模様。 ディスプレイモードは、VRMが待機モーションで表示されて、顔の位置に連動して表示も動いてくれるやつ。片目やカメラ越しだと立体的に見えるかも？ 用途は、ブースの横に立てかけて置くとか。タッチ操作で、モデルを近づけて画面から飛び出たり（してるように見えなくもない。本来的にはこのモードをARcoreで実装するアプリだったけど、途中でARcore経由のfront cameraが動作しなくなり、やむなくopenCVに移行。 VRM対応アプリを作ってみたかったのと、裸眼でどこまでプレゼンスを上げれるか？の実験でした。脳をバグらせるのは難しい。 デフォルトアバターから自前のVRMに置き換えられます。下記のパスに.vrmを１個置いてもらえれば。 \Android\data\com.Monaka.VFrame\files\VFrame https://play.google.com/store/apps/details?id=com.Monaka.VFrame ディスプレイモードのテスト版(PC)の動画#VFrame pic.twitter.com/LMQ4aY2DXN
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年9月16日" />
+<meta name="twitter:title" content="VFrame(androidアプリ) - Monaka note" />
+<meta name="twitter:site" content="https://twitter.com/captainmonaka11" />
+<meta name="twitter:creator" content="https://twitter.com/captainmonaka11" />
+
+
+<meta property="og:type" content="article" />
+<meta content="VFrame(androidアプリ) - Monaka note" property="og:title">
+<meta content="構成：android,unity,顔認識
+カメラからの顔認識を使った２つのモードで遊ぶアプリです。暗いと認識しないので注意。 ２つのモードがあって、トラッキングモードはフェイストラッキングできるやつ。目、口、頭の位置を認識。ウィンクもあくびもできます。タッチ操作でアングルを変えたり、画面下部タッチで、VRMで設定したブレンドシェイプも。 作った理由は、androidに #VRM のフェイストラッキングがなかったから。AssetのCVVTuberをもとにしてます。画像処理なので、ちょっと重いのと暗いと認識が落ちるのが課題。Dlib FaceLandmark Detectorを使ってますが、顔検知の元データがCC0になった模様。 ディスプレイモードは、VRMが待機モーションで表示されて、顔の位置に連動して表示も動いてくれるやつ。片目やカメラ越しだと立体的に見えるかも？ 用途は、ブースの横に立てかけて置くとか。タッチ操作で、モデルを近づけて画面から飛び出たり（してるように見えなくもない。本来的にはこのモードをARcoreで実装するアプリだったけど、途中でARcore経由のfront cameraが動作しなくなり、やむなくopenCVに移行。 VRM対応アプリを作ってみたかったのと、裸眼でどこまでプレゼンスを上げれるか？の実験でした。脳をバグらせるのは難しい。 デフォルトアバターから自前のVRMに置き換えられます。下記のパスに.vrmを１個置いてもらえれば。 \Android\data\com.Monaka.VFrame\files\VFrame https://play.google.com/store/apps/details?id=com.Monaka.VFrame ディスプレイモードのテスト版(PC)の動画#VFrame pic.twitter.com/LMQ4aY2DXN
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年9月16日" property="og:description">
+<meta property="og:url" content="https://captainmonaka.github.io/note/posts/4-post/" />
+<meta property="og:site_name" content="Monaka note" />
+
+<meta property="article:published_time" content="2019-08-12 08:14:00 &#43;0900 JST" />
+
+
+
+
+
+<script type="application/ld+json">
+{ 
+    "@context": "http://schema.org", 
+    "@type": "BlogPosting",
+    "headline": "VFrame(androidアプリ)",
+    "genre": "",  
+    "url": "https:\/\/captainmonaka.github.io\/note\/posts\/4-post\/",
+    "datePublished": "2019-08-12 08:14:00 \x2b0900 JST",
+    "description": "構成：android,unity,顔認識\nカメラからの顔認識を使った２つのモードで遊ぶアプリです。暗いと認識しないので注意。 ２つのモードがあって、トラッキングモードはフェイストラッキングできるやつ。目、口、頭の位置を認識。ウィンクもあくびもできます。タッチ操作でアングルを変えたり、画面下部タッチで、VRMで設定したブレンドシェイプも。 作った理由は、androidに #VRM のフェイストラッキングがなかったから。AssetのCVVTuberをもとにしてます。画像処理なので、ちょっと重いのと暗いと認識が落ちるのが課題。Dlib FaceLandmark Detectorを使ってますが、顔検知の元データがCC0になった模様。 ディスプレイモードは、VRMが待機モーションで表示されて、顔の位置に連動して表示も動いてくれるやつ。片目やカメラ越しだと立体的に見えるかも？ 用途は、ブースの横に立てかけて置くとか。タッチ操作で、モデルを近づけて画面から飛び出たり（してるように見えなくもない。本来的にはこのモードをARcoreで実装するアプリだったけど、途中でARcore経由のfront cameraが動作しなくなり、やむなくopenCVに移行。 VRM対応アプリを作ってみたかったのと、裸眼でどこまでプレゼンスを上げれるか？の実験でした。脳をバグらせるのは難しい。 デフォルトアバターから自前のVRMに置き換えられます。下記のパスに.vrmを１個置いてもらえれば。 \\Android\\data\\com.Monaka.VFrame\\files\\VFrame https:\/\/play.google.com\/store\/apps\/details?id=com.Monaka.VFrame ディスプレイモードのテスト版(PC)の動画#VFrame pic.twitter.com\/LMQ4aY2DXN\n\x26mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年9月16日",
+    "author": {
+        "@type": "Person",
+        "name": ""
+    }
+ }
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://captainmonaka.github.io/note/sass/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://captainmonaka.github.io/note">Monaka note</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://captainmonaka.github.io/notepages/about/">About</a></li>
+        <li><a href="https://captainmonaka.github.io/notepages/contact/">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Download <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a target="_blank" href="https://github.com/bul-ikana/hugo-cards">Project</a></li>
+            <li><a href="https://github.com/bul-ikana/hugo-cards.git">Download</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a target="_blank" href="https://themes.gohugo.io/">More Themes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+
+    <div class="container">
+      <div class="wrapper">
+        
+<div class="row">
+<div class="col-md-8">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">VFrame(androidアプリ)</h1>
+            <p class="post-meta"><time datetime='2019-08-12T08:14:00&#43;09:00' itemprop="datePublished">August 12, 2019</time></p>
+                 
+          </header>
+
+          <div class="post-content" itemprop="articleBody">
+            <p>構成：android,unity,顔認識<br>
+カメラからの顔認識を使った２つのモードで遊ぶアプリです。暗いと認識しないので注意。
+２つのモードがあって、トラッキングモードはフェイストラッキングできるやつ。目、口、頭の位置を認識。ウィンクもあくびもできます。タッチ操作でアングルを変えたり、画面下部タッチで、VRMで設定したブレンドシェイプも。
+作った理由は、androidに #VRM のフェイストラッキングがなかったから。AssetのCVVTuberをもとにしてます。画像処理なので、ちょっと重いのと暗いと認識が落ちるのが課題。Dlib FaceLandmark Detectorを使ってますが、顔検知の元データがCC0になった模様。
+ディスプレイモードは、VRMが待機モーションで表示されて、顔の位置に連動して表示も動いてくれるやつ。片目やカメラ越しだと立体的に見えるかも？
+用途は、ブースの横に立てかけて置くとか。タッチ操作で、モデルを近づけて画面から飛び出たり（してるように見えなくもない。本来的にはこのモードをARcoreで実装するアプリだったけど、途中でARcore経由のfront cameraが動作しなくなり、やむなくopenCVに移行。
+VRM対応アプリを作ってみたかったのと、裸眼でどこまでプレゼンスを上げれるか？の実験でした。脳をバグらせるのは難しい。
+デフォルトアバターから自前のVRMに置き換えられます。下記のパスに.vrmを１個置いてもらえれば。
+\Android\data\com.Monaka.VFrame\files\VFrame
+<br>
+<a href="https://play.google.com/store/apps/details?id=com.Monaka.VFrame">https://play.google.com/store/apps/details?id=com.Monaka.VFrame</a>
+<br>
+<br>
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="ja"><p lang="ja" dir="ltr">ディスプレイモードのテスト版(PC)の動画<a href="https://twitter.com/hashtag/VFrame?src=hash&amp;ref_src=twsrc%5Etfw">#VFrame</a> <a href="https://t.co/LMQ4aY2DXN">pic.twitter.com/LMQ4aY2DXN</a></p>&mdash; Monaka モナカ㊥ (@captainmonaka11) <a href="https://twitter.com/captainmonaka11/status/1173542806566031367?ref_src=twsrc%5Etfw">2019年9月16日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+          </div>
+
+    </article>
+    <div class="row">
+        
+    </div>
+    
+    <div class="row">
+            <ul class="pager">
+             
+                    <li><a class="next" href="https://captainmonaka.github.io/note/posts/5-post/">&laquo; ホロアトレの思い出(動画)</a></li>
+              
+              
+                <li><a class="previous" href="https://captainmonaka.github.io/note/posts/3-post/">TokinoSora FanWorld reaming!(VRChatワールド) &raquo;</a></li>
+              
+            </ul>
+    </div>
+</div>
+
+
+<div class="col-md-4 mt20">
+        <div class="post-img">
+           
+            <img width="600" src="https://captainmonaka.github.io/noteimages/down4.png" alt="VFrame(androidアプリ)">
+            
+        </div>
+            
+        
+        <div class="mt10 recent">
+            <h2>Recent articles</h2>        
+             <ul>
+                
+
+                      <li>
+                      <p><a href="https://captainmonaka.github.io/note/posts/5-post/">ホロアトレの思い出(動画)</a><small>&nbsp;&nbsp;September 2, 2019</small></p>
+                      </li>
+
+                
+
+                      <li>
+                      <p><a href="https://captainmonaka.github.io/note/posts/4-post/">VFrame(androidアプリ)</a><small>&nbsp;&nbsp;August 12, 2019</small></p>
+                      </li>
+
+                
+
+                      <li>
+                      <p><a href="https://captainmonaka.github.io/note/posts/3-post/">TokinoSora FanWorld reaming!(VRChatワールド)</a><small>&nbsp;&nbsp;April 12, 2019</small></p>
+                      </li>
+
+                
+              </ul>
+        </div>
+        
+        <br>
+
+</div>
+
+</div>
+
+
+
+
+      </div>
+    </div>
+
+    <footer>
+    <div class="container">
+        <div class="row p20">
+            
+
+            <div class="col-md-4 text-center mt25" >
+                
+            </div>
+            <div class="col-md-4 text-center mt25">
+               
+               
+               
+                <a target="_blank" href="https://twitter.com/captainmonaka11"><li class="social twitter"><i class="fa fa-twitter-square"></i></li></a>
+                
+               
+               
+            </div>
+
+        </div> 
+    </div>
+</footer>
+    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://captainmonaka.github.io/note/js/bootstrap.min.js"></script>
+  
+  </body>
+
+</html>
