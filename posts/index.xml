@@ -6,10 +6,23 @@
     <description>Recent content in Posts on Monaka note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Mon, 02 Sep 2019 08:14:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 08:14:00 +0900</lastBuildDate>
     
 	<atom:link href="https://captainmonaka.github.io/note/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ダンス練習(VRアプリ)</title>
+      <link>https://captainmonaka.github.io/note/posts/6-post/</link>
+      <pubDate>Sat, 02 Nov 2019 08:14:00 +0900</pubDate>
+      
+      <guid>https://captainmonaka.github.io/note/posts/6-post/</guid>
+      <description>構成：unity,steamVR,vive
+かわいい先生を見ながらダンス練習。VRで立体的にモーションが把握できます。 VR視点でお手本と鏡をみながら、ライバルよりうまく踊ろう。 モーション一致（右手左手のポジション）で得点化されます。 VRM＋音源＋モーション読み込み機能はつけたい。2019/11時点で開発中。 ダンス系VRアプリを試作するマン！
+３人のうち、誰が自分（フルトラ）でしょうか？&amp;gt;ﾘﾝ
+#unity pic.twitter.com/ggH5inON58
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年10月30日</description>
+    </item>
     
     <item>
       <title>ホロアトレの思い出(動画)</title>

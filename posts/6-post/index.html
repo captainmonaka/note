@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ダンス練習(VRアプリ) - Monaka note</title>
+<meta name="description" content="構成：unity,steamVR,vive
+かわいい先生を見ながらダンス練習。VRで立体的にモーションが把握できます。 VR視点でお手本と鏡をみながら、ライバルよりうまく踊ろう。 モーション一致（右手左手のポジション）で得点化されます。 VRM＋音源＋モーション読み込み機能はつけたい。2019/11時点で開発中。 ダンス系VRアプリを試作するマン！
+３人のうち、誰が自分（フルトラ）でしょうか？&amp;gt;ﾘﾝ
+#unity pic.twitter.com/ggH5inON58
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年10月30日"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="https://captainmonaka.github.io/note/posts/6-post/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="構成：unity,steamVR,vive
+かわいい先生を見ながらダンス練習。VRで立体的にモーションが把握できます。 VR視点でお手本と鏡をみながら、ライバルよりうまく踊ろう。 モーション一致（右手左手のポジション）で得点化されます。 VRM＋音源＋モーション読み込み機能はつけたい。2019/11時点で開発中。 ダンス系VRアプリを試作するマン！
+３人のうち、誰が自分（フルトラ）でしょうか？&amp;gt;ﾘﾝ
+#unity pic.twitter.com/ggH5inON58
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年10月30日" />
+<meta name="twitter:title" content="ダンス練習(VRアプリ) - Monaka note" />
+<meta name="twitter:site" content="https://twitter.com/captainmonaka11" />
+<meta name="twitter:creator" content="https://twitter.com/captainmonaka11" />
+
+
+<meta property="og:type" content="article" />
+<meta content="ダンス練習(VRアプリ) - Monaka note" property="og:title">
+<meta content="構成：unity,steamVR,vive
+かわいい先生を見ながらダンス練習。VRで立体的にモーションが把握できます。 VR視点でお手本と鏡をみながら、ライバルよりうまく踊ろう。 モーション一致（右手左手のポジション）で得点化されます。 VRM＋音源＋モーション読み込み機能はつけたい。2019/11時点で開発中。 ダンス系VRアプリを試作するマン！
+３人のうち、誰が自分（フルトラ）でしょうか？&amp;gt;ﾘﾝ
+#unity pic.twitter.com/ggH5inON58
+&amp;mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年10月30日" property="og:description">
+<meta property="og:url" content="https://captainmonaka.github.io/note/posts/6-post/" />
+<meta property="og:site_name" content="Monaka note" />
+
+<meta property="article:published_time" content="2019-11-02 08:14:00 &#43;0900 JST" />
+
+
+
+
+
+<script type="application/ld+json">
+{ 
+    "@context": "http://schema.org", 
+    "@type": "BlogPosting",
+    "headline": "ダンス練習(VRアプリ)",
+    "genre": "",  
+    "url": "https:\/\/captainmonaka.github.io\/note\/posts\/6-post\/",
+    "datePublished": "2019-11-02 08:14:00 \x2b0900 JST",
+    "description": "構成：unity,steamVR,vive\nかわいい先生を見ながらダンス練習。VRで立体的にモーションが把握できます。 VR視点でお手本と鏡をみながら、ライバルよりうまく踊ろう。 モーション一致（右手左手のポジション）で得点化されます。 VRM＋音源＋モーション読み込み機能はつけたい。2019\/11時点で開発中。 ダンス系VRアプリを試作するマン！\n３人のうち、誰が自分（フルトラ）でしょうか？\x26gt;ﾘﾝ\n#unity pic.twitter.com\/ggH5inON58\n\x26mdash; Monaka モナカ㊥ (@captainmonaka11) 2019年10月30日",
+    "author": {
+        "@type": "Person",
+        "name": ""
+    }
+ }
+</script>
+
+
+
+
+<link rel="stylesheet" href="https://captainmonaka.github.io/note/sass/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://captainmonaka.github.io/note/">Monaka note</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://captainmonaka.github.io/note/pages/about/">About</a></li>
+        <li><a href="https://captainmonaka.github.io/note/pages/contact/">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Download <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a target="_blank" href="https://github.com/bul-ikana/hugo-cards">Project</a></li>
+            <li><a href="https://github.com/bul-ikana/hugo-cards.git">Download</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a target="_blank" href="https://themes.gohugo.io/">More Themes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+
+    <div class="container">
+      <div class="wrapper">
+        
+<div class="row">
+<div class="col-md-8">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+          <header class="post-header">
+            <h1 class="post-title" itemprop="name headline">ダンス練習(VRアプリ)</h1>
+            <p class="post-meta"><time datetime='2019-11-02T08:14:00&#43;09:00' itemprop="datePublished">November 2, 2019</time></p>
+                 
+          </header>
+
+          <div class="post-content" itemprop="articleBody">
+            <p>構成：unity,steamVR,vive<br>
+かわいい先生を見ながらダンス練習。VRで立体的にモーションが把握できます。
+<br>VR視点でお手本と鏡をみながら、ライバルよりうまく踊ろう。
+<br>モーション一致（右手左手のポジション）で得点化されます。
+<br>VRM＋音源＋モーション読み込み機能はつけたい。2019/11時点で開発中。
+<br>
+<blockquote class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ダンス系VRアプリを試作するマン！<br>３人のうち、誰が自分（フルトラ）でしょうか？&gt;ﾘﾝ<br> <a href="https://twitter.com/hashtag/unity?src=hash&amp;ref_src=twsrc%5Etfw">#unity</a> <a href="https://t.co/ggH5inON58">pic.twitter.com/ggH5inON58</a></p>&mdash; Monaka モナカ㊥ (@captainmonaka11) <a href="https://twitter.com/captainmonaka11/status/1189600981719244800?ref_src=twsrc%5Etfw">2019年10月30日</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+          </div>
+
+    </article>
+    <div class="row">
+        
+    </div>
+    
+    <div class="row">
+            <ul class="pager">
+             
+              
+                <li><a class="previous" href="https://captainmonaka.github.io/note/posts/5-post/">ホロアトレの思い出(動画) &raquo;</a></li>
+              
+            </ul>
+    </div>
+</div>
+
+
+<div class="col-md-4 mt20">
+        <div class="post-img">
+           
+            <img width="600" src="https://captainmonaka.github.io/note/images/down6.png" alt="ダンス練習(VRアプリ)">
+            
+        </div>
+            
+        
+        <div class="mt10 recent">
+            <h2>Recent articles</h2>        
+             <ul>
+                
+
+                      <li>
+                      <p><a href="https://captainmonaka.github.io/note/posts/6-post/">ダンス練習(VRアプリ)</a><small>&nbsp;&nbsp;November 2, 2019</small></p>
+                      </li>
+
+                
+
+                      <li>
+                      <p><a href="https://captainmonaka.github.io/note/posts/5-post/">ホロアトレの思い出(動画)</a><small>&nbsp;&nbsp;September 2, 2019</small></p>
+                      </li>
+
+                
+
+                      <li>
+                      <p><a href="https://captainmonaka.github.io/note/posts/4-post/">VFrame(androidアプリ)</a><small>&nbsp;&nbsp;August 12, 2019</small></p>
+                      </li>
+
+                
+              </ul>
+        </div>
+        
+        <br>
+
+</div>
+
+</div>
+
+
+
+
+      </div>
+    </div>
+
+    <footer>
+    <div class="container">
+        <div class="row p20">
+            
+
+            <div class="col-md-4 text-center mt25" >
+                
+            </div>
+            <div class="col-md-4 text-center mt25">
+               
+               
+               
+                <a target="_blank" href="https://twitter.com/captainmonaka11"><li class="social twitter"><i class="fa fa-twitter-square"></i></li></a>
+                
+               
+               
+            </div>
+
+        </div> 
+    </div>
+</footer>
+    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://captainmonaka.github.io/note//js/bootstrap.min.js"></script>
+  
+  </body>
+
+</html>
